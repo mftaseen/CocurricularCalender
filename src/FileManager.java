@@ -49,6 +49,25 @@ public class FileManager {
             }
         }
         else {
+            System.out.println("No User Info Found");
+        }
+        writer.write("\n");
+        writer.close();
+    }
+
+    public void clubExportToTxt(List<Club> clubList, String filename, String club, String fest) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+        writer.write(club+"\nClub Information\n===========================\n\n");
+        if (filename.equals("clubList.tdf")) {
+            writer.write("\n\n");
+        }
+        if (clubList!=null) {
+            writer.write("Abbreviation - Club Name - Email\n");
+            for (Club a : clubList) {
+                writer.write(a.clubAbbr + " - " + a.clubName + " - " + a.clubEmail + "\n");
+            }
+        }
+        else {
             System.out.println("No Applicant Info Found");
         }
         writer.write("\n");

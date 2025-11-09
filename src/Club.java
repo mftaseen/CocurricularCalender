@@ -16,30 +16,31 @@ public class Club {
     }
 
     public boolean newClub() {
+        Club Club = new Club();
         Scanner Input = new Scanner(System.in);
         System.out.println("======== New Club Registration ========");
         System.out.print("Enter Club Name: ");
-        this.clubName = Input.nextLine();
+        Club.clubName = Input.nextLine();
         System.out.print("Enter Club Abbreviation: ");
-        this.clubAbbr = Input.nextLine();
+        Club.clubAbbr = Input.nextLine();
         System.out.print("Enter Club Description: ");
-        this.clubDescription = Input.nextLine();
+        Club.clubDescription = Input.nextLine();
         System.out.print("Enter Club Website: ");
-        this.clubWebsite = Input.nextLine();
+        Club.clubWebsite = Input.nextLine();
         System.out.print("Enter Club Email: ");
-        this.clubEmail = Input.nextLine();
+        Club.clubEmail = Input.nextLine();
         System.out.print("Enter Club Phone: ");
-        this.clubPhone = Input.nextLine();
+        Club.clubPhone = Input.nextLine();
         System.out.print("Enter the Name of Club President: ");
-        this.clubPrez[0] = Input.nextLine();
+        Club.clubPrez[0] = Input.nextLine();
         System.out.print("Enter the Name of Club General Secretary: ");
-        this.clubGS[0] = Input.nextLine();
+        Club.clubGS[0] = Input.nextLine();
         System.out.print("Club Year: ");
         String year = Input.nextLine();
-        this.clubGS[1] = year;
-        this.clubPrez[1] = year;
+        Club.clubGS[1] = year;
+        Club.clubPrez[1] = year;
         System.out.print("Enter the Initial Login Password: ");
-        this.password = Input.nextLine();
+        Club.password = Input.nextLine();
         System.out.println("Club Registration Successful!\nUsername: " + this.clubEmail + "\nPassword: " + this.password);
         return true;
     }
